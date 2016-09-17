@@ -5,10 +5,14 @@ function setup() {
     createCanvas(1200, 900);
     setFrameRate(30);
 
-    var start = createVector(0, 100);
-    var end = createVector(width, 100);
+    var start = createVector(0, 300);
+    var end = createVector(width, 300);
 
     KochLines.push(new KochLine(start, end));
+
+    for(var i= 0; i<5;i++){
+    	generate();
+    }
 
 }
 
@@ -36,7 +40,7 @@ function generate() {
         next.push(new KochLine(c, d));
         next.push(new KochLine(d, e));
     }
-    lines = next;
+    KochLines = next;
 }
 
 function mousePressed() {
