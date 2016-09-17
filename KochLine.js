@@ -1,6 +1,5 @@
 function KochLine(a,b){
-	console.log("A",a);
-	console.log("B",b);
+
 	this.start = a.copy();
 	this.end = b.copy();	
 
@@ -32,9 +31,8 @@ function KochLine(a,b){
 	}
 
 	this.kochD =function(){
-		console.log('d');
 		var v = p5.Vector.sub(this.end,this.start);
-		v.div(2/3.0);
+		v.mult(2/3.0);
 		v.add(this.start);
 		return v;
 
