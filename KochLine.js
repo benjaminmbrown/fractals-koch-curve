@@ -5,6 +5,7 @@ function KochLine(a,b){
 
 	this.display = function(){
 		stroke(0);
+
 		line(this.start.x,this.start.y, this.end.x,this.end.y);
 	}
 
